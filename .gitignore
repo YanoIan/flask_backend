@@ -1,12 +1,13 @@
-# Ignore .env files
+# Environment variables
 .env
+.env.*
+!.env.example
 
-# Ignore Firebase credentials
-C:/Users/Hp/flask-travel-backend/travel-project-ba441-firebase-adminsdk-mzcmn-e33d09bed1.json
+# Firebase credentials
+*firebase-adminsdk*.json
+service-account*.json
 
-
-
-# Standard ignores for Python projects
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
