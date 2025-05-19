@@ -4,6 +4,7 @@
 !.env.example
 
 # Firebase credentials
+travel-project-ba441-firebase-adminsdk-mzcmn-e33d09bed1.json
 *firebase-adminsdk*.json
 service-account*.json
 
