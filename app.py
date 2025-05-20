@@ -18,21 +18,23 @@ load_dotenv()
 # API Keys and Configuration
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 SERPER_API_KEY = os.getenv("SERPER_API_KEY")
-FIREBASE_CREDENTIALS_PATH = os.getenv("FIREBASE_CREDENTIALS_PATH")
+FIREBASE_CREDENTIALS_JSON = os.getenv("FIREBASE_CREDENTIALS_JSON")
 
 # Validate required environment variables
 required_vars = {
     "GOOGLE_API_KEY": GOOGLE_API_KEY,
     "SERPER_API_KEY": SERPER_API_KEY,
-    "FIREBASE_CREDENTIALS_PATH": FIREBASE_CREDENTIALS_PATH
+    "FIREBASE_CREDENTIALS_JSON": FIREBASE_CREDENTIALS_JSON
 }
 
 for var_name, var_value in required_vars.items():
     if not var_value:
         raise RuntimeError(f"{var_name} is missing in the environment variables.")
 
-# Initialize Firebase Admin
-cred = credentials.Certificate(FIREBASE_CREDENTIALS_PATH)
+# Initialize Firebase Admin using JSON from env
+creds_dict = json.loads(FIREBASE_CREDENTIALS_JSON)
+creds_dict["private_key"] = creds_dict["private_key"].replace("\\n", "\n")
+cred = credentials.Certificate(creds_dict)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
