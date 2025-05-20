@@ -321,9 +321,18 @@ def refresh_recommendations(user_id):
         logging.error(f"Error refreshing recommendations: {e}")
         return jsonify({"error": "An internal error occurred"}), 500
 
+@app.route('/')
+def root():
+    """Root route for service status or redirect."""
+    return jsonify({"status": "Travel Recommendation API is running"}), 200
+
 @app.route('/healthz')
 def health_check():
     return "OK", 200
+
+@app.errorhandler(404)
+def not_found(e):
+    return jsonify({"error": "Route not found"}), 404
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
