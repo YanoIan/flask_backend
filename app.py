@@ -208,7 +208,7 @@ def generate_recommendations():
     try:
         # Generate prompt for AI
         prompt = f"""
-        Generate 3 unique travel destination recommendations based on these preferences:
+        Generate 4 unique travel destination recommendations based on these preferences:
         - Travel Style: {new_preferences['travelStyle']}
         - Group Type: {new_preferences['groupType']}
         - Duration: {new_preferences['duration']}
