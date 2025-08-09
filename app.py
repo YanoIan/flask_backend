@@ -217,7 +217,7 @@ def generate_recommendations():
         - Must-Have Features: {', '.join(new_preferences['mustHaves'])}
 
         For each destination, provide:
-        1. destination 
+        1. destination (Kenyan ones only), (Parks and beach resorts count as destiation also but ensure you start with the town its found)
         2. description (2-3 sentences about why it's perfect for them)
         3. activities (3 must-do activities that match their preferences)
         4. budget (estimated daily cost range)
