@@ -220,7 +220,7 @@ def generate_recommendations():
         1. destination (Kenyan ones only), (Parks and beach resorts count as destiation also but ensure you start with the town its found)
         2. description (2-3 sentences about why it's perfect for them)
         3. activities (3 must-do activities that match their preferences)
-        4. budget (estimated daily cost range)
+        4. budget (estimated daily cost range) (add if it includes accommodation or not)
         5. bestTimeToVisit (best season or months)
         6. travelTip (one key tip based on their preferences)
         
@@ -231,7 +231,7 @@ def generate_recommendations():
                 "destination": "Bali, Indonesia",
                 "description": "Bali is perfect for...",
                 "activities": ["Visit Ubud Monkey Forest", "Relax on Seminyak Beach", "Explore Uluwatu Temple"],
-                "budget": "$50-$100 per day",
+                "budget": "Kes 1000- 2000 per day",
                 "bestTimeToVisit": "April to October",
                 "travelTip": "Rent a scooter for easy transportation."
             }},
@@ -239,7 +239,7 @@ def generate_recommendations():
                 "destination": "Kyoto, Japan",
                 "description": "Kyoto offers...",
                 "activities": ["Visit Fushimi Inari Shrine", "Explore Arashiyama Bamboo Grove", "Experience a tea ceremony"],
-                "budget": "$100-$200 per day",
+                "budget": "Kes1000-2000 per day",
                 "bestTimeToVisit": "March to May",
                 "travelTip": "Book accommodations early during cherry blossom season."
             }}
